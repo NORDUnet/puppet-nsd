@@ -83,4 +83,15 @@ class nsd (
     purge   => $zonepurge,
     recurse => true,
   }
+
+  case $::operatingsystem {
+    'Ubuntu': {
+      concat::fragment { 'nsd-include':
+        order   => '99',
+        target  => $config_file,
+        content => "include: /etc/nsd/nsd.conf.d/*\n\n",
+      }
+    }
+  }
+
 }
