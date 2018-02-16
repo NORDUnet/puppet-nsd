@@ -7,3 +7,5 @@ server:
 <% elsif @interface != '' -%><%=   "  ip-address: #{@interface}" %>
 <% end -%>
   port: <%= @port %>
+  rrl-size: <%= @rrl_size %>
+  rrl-ratelimit: <%= @rrl_ratelimit %>

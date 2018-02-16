@@ -13,6 +13,8 @@ class nsd (
   $control_cmd      = $nsd::params::control_cmd,
   $setup_cmd        = $nsd::params::control_cmd,
   $zonedir          = $nsd::params::zonedir,
+  $rrl_size         = '1000000',
+  $rrl_ratelimit    = '100',
   $zonepurge        = false, # purge of unmanaged zone files
   $group            = $nsd::params::group,
   $owner            = $nsd::params::owner,
